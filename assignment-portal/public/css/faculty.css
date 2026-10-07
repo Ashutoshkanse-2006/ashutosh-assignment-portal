@@ -1,0 +1,65 @@
+/* =========================================================
+   Faculty side - extra styles (loaded after style.css)
+   Only adds what the student pages do not already have.
+   ========================================================= */
+
+:root {
+    --danger: #dc2626;
+    --danger-dark: #b91c1c;
+    --danger-bg: #fee2e2;
+    --danger-text: #991b1b;
+    --warn-bg: #fef3c7;
+    --warn-text: #92400e;
+}
+
+/* messages */
+.alert {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+}
+.alert-success { background: var(--success-bg); color: var(--success-text); border-color: #bbf7d0; }
+.alert-error   { background: var(--danger-bg);  color: var(--danger-text);  border-color: #fecaca; }
+
+/* extra badge colours (the base .badge is green) */
+.badge-warn   { background: var(--warn-bg);   color: var(--warn-text); }
+.badge-danger { background: var(--danger-bg); color: var(--danger-text); }
+
+/* buttons */
+.btn-sm { padding: 6px 14px; font-size: 0.85rem; border-radius: 8px; }
+.btn-danger { background: var(--danger); color: #fff; }
+.btn-danger:hover { background: var(--danger-dark); }
+
+/* page header with a button on the right */
+.page-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* search / filter bar above tables */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.toolbar .form-control { flex: 1 1 200px; width: auto; }
+
+/* table helpers */
+td.actions { white-space: nowrap; }
+td.actions .btn { margin-right: 6px; }
+.inline-form { display: inline; }
+.muted { color: var(--muted); }
+small.muted { font-size: 0.82rem; }
+
+textarea.form-control { resize: vertical; min-height: 90px; }
+
+@media (max-width: 768px) {
+    .toolbar .form-control, .toolbar .btn { flex: 1 1 100%; }
+    .page-header-row .btn { width: 100%; }
+}
